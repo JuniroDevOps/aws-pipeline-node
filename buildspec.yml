@@ -28,7 +28,8 @@ phases:
       #- zip -r juniro-backend-api.zip ./ -x 'node_modules/*'
       #- aws s3 sync ./juniro-backend-api.zip s3://juniro-backend-api-zip/
       #- aws s3 sync ./ s3://juniro-backend-api/
-      - aws s3 sync ./build s3://juniro-backend-api 
+      #- aws s3 sync ./build s3://juniro-backend-api 
+      - aws s3 sync ./ s3://juniro-backend-api
 # Include only the files required for your application to run.
 # Do not use recursively include artifacts from node_modules directory as it will include unnecessary packages 
 # used only for building and testing.
