@@ -20,7 +20,7 @@ phsses:
     build:
         commands:
             - echo Executing build Phase
-            - npm run build
+            - npm build
         finally:
             - echo Executing build Finally commands
     post_build:
@@ -30,9 +30,6 @@ phsses:
         finally:
             - echo Executing post_build Finally commands
 artifacts:
-    files:
+      base-directory: dist/
+      files:
         - '**/*'
-    artifact2:
-          base-directory: $CODEBUILD_SRC_DIR/
-          files:
-            - '**/*'
