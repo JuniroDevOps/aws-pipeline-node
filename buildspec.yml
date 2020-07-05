@@ -1,27 +1,27 @@
 version: 0.2
 
 phsses:
-	install:
-		commands:
-			- echo Executing Install Phase
-			- echo Multiple commands
-		finally:
-			- echo Executing Install Finally commands
-	pre_build:
-		commands:
-			- echo Executing pre_build Phase
-			- echo Multiple commands
-		finally:
-			- echo Executing pre_build Finally commands
-	build:
-		commands:
-			- echo Executing build Phase
-			- echo Multiple commands
-		finally:
-			- echo Executing build Finally commands
-	post_build:
-		commands:
-			- echo Executing post_build Phase
-			- echo Multiple commands
-		finally:
-			- echo Executing post_build Finally commands
+    install:
+        commands:
+            - echo Executing Install Phase
+            - echo Multiple commands
+        finally:
+            - echo Executing Install Finally commands
+    pre_build:
+        commands:
+            - echo Executing pre_build Phase
+            - echo Multiple commands
+        finally:
+            - echo Executing pre_build Finally commands
+    build:
+        commands:
+            - echo Executing build Phase
+            - echo Multiple commands
+        finally:
+            - echo Executing build Finally commands
+    post_build:
+        commands:
+            - echo Executing post_build Phase
+            - echo Multiple commands
+        finally:
+            - echo Executing post_build Finally commands
