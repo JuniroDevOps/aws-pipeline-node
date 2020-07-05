@@ -30,6 +30,7 @@ phsses:
         finally:
             - echo Executing post_build Finally commands
 artifacts:
-    files:
-        - '**/*'
-    base-directory: ./
+    artifact2:
+          base-directory: $CODEBUILD_SRC_DIR/
+          files:
+            - '**/*'
