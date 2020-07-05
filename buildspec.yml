@@ -4,7 +4,7 @@ phsses:
     install:
         commands:
             - echo Executing Install Phase
-            - echo Multiple commands
+            - echo Execute Multiple commands
         finally:
             - echo Executing Install Finally commands
     pre_build:
