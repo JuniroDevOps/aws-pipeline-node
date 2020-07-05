@@ -20,7 +20,7 @@ phsses:
     build:
         commands:
             - echo Executing build Phase
-            - npm build
+            - npm run prod
         finally:
             - echo Executing build Finally commands
     post_build:
