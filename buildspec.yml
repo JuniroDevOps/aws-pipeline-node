@@ -1,0 +1,37 @@
+version: 0.2
+
+phases:
+  
+  pre_build:
+    commands:
+      - $(aws ecr get-login --no-include-email)
+      - REPOSITORY_URI=159806586628.dkr.ecr.us-east-1.amazonaws.com/juniro-node-api
+      - COMMIT_HASH=$(echo $CODE_BUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - IMAGE_TAG=build-$(echo $CODE_BUILD_ID | awk -F":" '{print $2}')
+  build:
+    commands:
+      - docker build -t $REPOSITORY_URI:latest .
+      - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
+      # - command
+  #post_build:
+    #commands:
+      - docker push $REPOSITORY_URI:latest
+      - docker push $REPOSITORY_URI:$IMAGE_TAG
+#reports:
+  #report-name-or-arn:
+    #files:
+      # - location
+      # - location
+    #base-directory: location
+    #discard-paths: yes
+    #file-format: JunitXml | CucumberJson
+artifacts:
+  files: images.json
+    # - location
+    # - location
+  #name: $(date +%Y-%m-%d)
+  #discard-paths: yes
+  #base-directory: location
+#cache:
+  #paths:
+    # - paths
