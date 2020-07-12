@@ -1,15 +1,24 @@
 {
-  "name": "node-backed",
+  "name": "releaseworks-hellonode",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "A Hello World HTTP server",
+  "main": "main.js",
   "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js",
+    "start": "node main.js"
   },
-  "author": "Kuldeep Singh",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kdmalviyan/aws-pipeline-node/"
+  },
+  "keywords": [
+    "node",
+    "docker",
+    "dockerfile"
+  ],
+  "author": "academy@release.works",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1"
+  "devDependencies": {
+    "test": ">=0.6.0"
   }
 }
